@@ -55,3 +55,15 @@ class ChatLogSummarizer: #A class to parse and summarize AI chat logs.
         except Exception as e:
             print(f"Error parsing chat log: {e}")
             return False
+    
+
+
+    def get_message_stats(self): #Calculate message statistics.
+        
+        stats = {
+            'total_messages': len(self.user_messages) + len(self.ai_messages),
+            'user_messages': len(self.user_messages),
+            'ai_messages': len(self.ai_messages),
+            'exchanges': min(len(self.user_messages), len(self.ai_messages))
+        }
+        return stats
