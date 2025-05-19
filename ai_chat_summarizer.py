@@ -85,3 +85,19 @@ class ChatLogSummarizer: #A class to parse and summarize AI chat logs.
         tokens = [self.lemmatizer.lemmatize(token) for token in tokens]
         
         return tokens
+    def extract_keywords_simple(self, top_n=5): #Extract keywords using simple frequency counting.
+        
+
+        # Combine all messages
+        all_text = ' '.join(self.user_messages + self.ai_messages)
+        
+        # Preprocess text
+        tokens = self.preprocess_text(all_text)
+        
+        # Count word frequencies
+        word_freq = Counter(tokens)
+        
+        # Get top keywords
+        top_keywords = [word for word, _ in word_freq.most_common(top_n)]
+        
+        return top_keywords
