@@ -67,3 +67,21 @@ class ChatLogSummarizer: #A class to parse and summarize AI chat logs.
             'exchanges': min(len(self.user_messages), len(self.ai_messages))
         }
         return stats
+    
+
+    def preprocess_text(self, text): # Preprocess text for keyword extraction.
+        
+      
+        # Lowercase and tokenize
+        tokens = word_tokenize(text.lower())
+        
+        # Remove punctuation and numbers
+        tokens = [token for token in tokens if token not in string.punctuation and not token.isdigit()]
+        
+        # Remove stop words and short words
+        tokens = [token for token in tokens if token not in self.stop_words and len(token) > 2]
+        
+        # Lemmatize tokens
+        tokens = [self.lemmatizer.lemmatize(token) for token in tokens]
+        
+        return tokens
