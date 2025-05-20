@@ -1,0 +1,31 @@
+User: I want to use AI to predict metabolic syndrome control in NCD patients. What kind of models should I use?
+
+AI: That’s a relevant and important application. Since your target variable is binary (controlled vs uncontrolled metabolic syndrome), here are a few suitable models:
+
+Logistic Regression (for interpretability)
+
+Random Forest / XGBoost (for performance & feature importance)
+
+Artificial Neural Network (ANN) (for capturing complex patterns)
+
+Bayesian Neural Network (BNN) (to quantify uncertainty)
+
+Do you want guidance on how to implement these in Python or compare their performance?
+
+User: I already implemented ANN and BNN with variational inference. But I get different accuracy scores each time I run BNN. Is that normal?
+
+AI: Yes, that’s expected with Bayesian models, especially those using variational inference. Because BNNs sample weights from a probability distribution, each run can yield slightly different results.
+
+To stabilize your results:
+
+Set a fixed random seed for reproducibility
+
+Average predictions over multiple Monte Carlo samples
+
+Train longer or adjust your KL divergence scale
+
+Would you like a code example to implement prediction averaging?
+
+User: Yes, that would be helpful.
+
+AI: Here’s how you can average predictions using TensorFlow/Keras:
