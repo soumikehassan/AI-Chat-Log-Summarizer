@@ -2,8 +2,6 @@
 """
 AI Chat Log Summarizer
 
-This script reads chat logs between a user and an AI, parses them,
-and generates a summary including message counts and frequently used keywords.
 """
 
 import os
