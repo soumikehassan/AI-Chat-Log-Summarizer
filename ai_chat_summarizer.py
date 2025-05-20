@@ -471,7 +471,7 @@ def process_directory(directory_path, use_tfidf=True):
     return results
 
 def main():
-    """Main function to demonstrate usage."""
+    """Main function to demonstrate usage"""
     import argparse
     
     parser = argparse.ArgumentParser(description='Summarize AI chat logs.')
