@@ -54,6 +54,8 @@ To summarize a single chat log file:
 ```bash
 python ai_chat_summarizer.py path/to/chat.txt
 ```
+### To summarize a single chat log file
+![Chat Summarizer Screenshot](Chat_log_1.png)
 
 Example output:
 ```
@@ -64,13 +66,6 @@ Summary:
 - Most common keywords: machine, learning, system, data, ai.
 ```
 
-### Example output:
-To summarize a single chat log file
-![Chat Summarizer Screenshot](Chat_log_1.png)
-
-To summarize a Muliple Files chat log file
-![Chat Summarizer Screenshot](chat_log_2.png)
-
 
 ### Process Multiple Files
 
@@ -79,6 +74,8 @@ To summarize all .txt files in a directory:
 ```bash
 python ai_chat_summarizer.py path/to/chat/logs/
 ```
+### To summarize a Muliple Files chat log file
+![Chat Summarizer Screenshot](chat_log_2.png)
 
 ### Keyword Extraction Options
 
