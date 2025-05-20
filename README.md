@@ -64,6 +64,10 @@ Summary:
 - Most common keywords: machine, learning, system, data, ai.
 ```
 
+Example output:
+![Chat Summarizer Screenshot](Chat_log_1.png)
+
+
 ### Process Multiple Files
 
 To summarize all .txt files in a directory:
