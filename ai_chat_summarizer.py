@@ -101,16 +101,9 @@ class ChatLogSummarizer: #A class to parse and summarize AI chat logs.
         top_keywords = [word for word, _ in word_freq.most_common(top_n)]
         
         return top_keywords
-    def extract_keywords_tfidf(self, top_n=5):
-        """
-        Extract keywords using TF-IDF.
-        
-        Args:
-            top_n (int): Number of top keywords to extract
-            
-        Returns:
-            list: List of top keywords
-        """
+    
+    def extract_keywords_tfidf(self, top_n=5): # Extract keywords using TF-IDF.
+
         # Combine user messages and AI messages separately
         user_text = ' '.join(self.user_messages)
         ai_text = ' '.join(self.ai_messages)
@@ -204,8 +197,7 @@ def process_directory(directory_path, use_tfidf=True): # Process all .txt files 
     
     return results
 
-def main():
-    """Main function to demonstrate usage."""
+def main(): #Main function to demonstrate usage.
     import argparse
     
     parser = argparse.ArgumentParser(description='Summarize AI chat logs.')
